@@ -1,3 +1,61 @@
-.hello {
-    color: red;
+.title {
+  font-size: 2vw;
+  font-family: sans-serif;
+}
+
+.first-article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.main-section {
+  box-shadow: 2px 2px 2px 2px #888;
+  margin: 12rem;
+}
+
+ul {
+  padding: 0 1rem;
+}
+
+.list {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.para-1 {
+  font-family: sans-serif;
+}
+
+.footer {
+  text-align: center;
+  padding: 8px;
+  background-color: #333;
+}
+
+.clear-link {
+  text-decoration: none;
+  color: #888;
+}
+
+.input-field {
+  width: 90%;
+  border: 0;
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+  padding: 0 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
