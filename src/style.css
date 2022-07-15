@@ -21,9 +21,10 @@ ul {
 
 .list {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
   justify-content: space-between;
+  list-style: none;
 }
 
 .para-1 {
@@ -44,6 +45,10 @@ ul {
 .input-field {
   width: 90%;
   border: 0;
+}
+
+.input {
+  width: 100%;
 }
 
 .form {
