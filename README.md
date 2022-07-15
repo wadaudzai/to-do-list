@@ -2,36 +2,34 @@
 
 # Hello Microverse
 
+This project was built to display a to-do-list. This project was built using webpack and will be served using webpack dev server.
+
 > This is a project containing several file such as: 
 1. index.html
 2. style.css
 3. script.js
+4. addToList.js
+5. createList.js
+6. listdata.js
+7. localstorage.js
+8. removeFromList.js
 
-Set up a new project with webpack that is based on the webpack exercise you have already completed.
-Create an index.html file and write your HTML markup here. Create an empty To Do List placeholder (<div> or <ul> element). The index.html file must be set as a template using the HTML Webpack Plugin.
-Create an index.js file and set an array of some simple to do tasks (array of objects). Each task object should contain three keys:
-description [string].
-completed [bool].
-index: [number].
-Write a function to iterate over the tasks array and populate an HTML list item element for each task.
-On page load render the dynamically created list of tasks in the dedicated placeholder. The list should appear in order of the index values for each task.
-Create a style.css and set rules for the To Do List. CSS must be loaded by Webpack Style/CSS Loader. Your list should be a clone of the part of the minimalist project captured in the video below.
 ## Built With
 
-- HTML, CSS, JS
-- Visual Studio Code
+-- HTML, CSS, JavaScript
+-- Used Webpack as bundler
+-- (Used Lighthouse, Webhint, Stylelint, and ESLint as linters)
 
 
 ## Getting Started
+This project makes use of Webpack to bundle all the JS modules, and FontAwesome icons.
 
-Dear User, in order to be able to open this project in your device kindly click on the green code button and select between the given options: 
-1. Open in Github Desktop.
-2. Download the ZIP file and open it in VS Code.
-3. Copy the SSH link and clone it in your terminal or powershell.
+Clone the repository into your local machine and then run npm install to download all the dependencies. Then after making any changes inside the src/ folder, you can run npm run build to generate the corresponding files inside dist/ directory.
 
+Run tests
+If you want to test your changes on the fly without having to build every time, you can use npm run start to start the webpack-dev-server in development mode. This will watch for any changes you make and update the page accordingly.
 
-
-To get a local copy up and running follow these simple example steps.
+To check the linters on your local env, make sure you have installed all dependencies (npm install) and then copy and paste the following files inside the root of the project: .hintrc, .stylelintrc.json, and .eslintrc.json.
 
 ### Prerequisites
     You only need a good computer with a browser and VS Code.
