@@ -1,55 +1,25 @@
 import './style.css';
+import creatList from './modules/createList.js';
+import addList from './modules/addToList.js';
+import listData from './modules/listdata.js';
+import localStorage from './modules/localStorage.js';
 
-console.log('walid');
+const input = document.querySelector('.input-field');
 
-const listData = [
-  {
-    description: 'Work on project',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Jog in the morning',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'eat a healthy breakfast',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'take a bus',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'study',
-    completed: false,
-    index: 4,
-  },
-  {
-    description: 'work',
-    completed: false,
-    index: 5,
-  },
-];
-
-const listContainer = document.querySelector('.list-container');
-const funcWal = () => {
-  for (let i = 0; i < listData.length; i += 1) {
-    const taskList = document.createElement('li');
-    taskList.classList.add('list');
-    const todo = `
-  <div class = "input-p">
-<input type="checkbox" class="checkbox" id="${listData[i].index}">
-        <p id="0" class="para-1">${listData[i].description}</p>
-        </div>
-        <i class="fa fa-ellipsis-v icon"></i>
-`;
-
-    listContainer.append(taskList);
-    taskList.innerHTML += todo;
+input.addEventListener('keypress', (e) => {
+  if (input.value.trim() === '') {
+    return null;
+  } if (e.key === 'Enter') {
+    e.preventDefault();
+    addList(e);
+    input.value = '';
   }
-};
-funcWal();
+  return null;
+});
+
+window.addEventListener('load', () => {
+  localStorage.getStorage(listData);
+  listData.forEach((child) => {
+    creatList(child);
+  });
+});
