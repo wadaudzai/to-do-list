@@ -4,7 +4,7 @@ import localStorage from './localStorage.js';
 const removeList = (index) => {
   const thrashIcon = document.querySelectorAll('.deleteIcon');
   const thrashLi = Array.from(thrashIcon);
-  if (index.completed === true) {
+  if (index) {
     thrashLi[index.index - 1].parentElement.remove();
 
     listData.splice(index.index - 1, 1);
